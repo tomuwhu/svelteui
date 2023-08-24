@@ -9,7 +9,7 @@
 
 {#if mounted}
 	<Space h={30} />
-	<Title align="center">SvelteUi Base</Title>
+	<Title align="center">SvelteUi Template</Title>
 	<Space h={30} />
 	<Stack align="center">
 		<Button class="animation-bounce" on:click={() => x++}>Szám: {x}</Button>
