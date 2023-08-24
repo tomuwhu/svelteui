@@ -12,7 +12,7 @@ const config = {
       pages: 'docs'
     }),
     paths: {
-      base: dev ? '' : '/svelteui/docs',
+      base: dev ? '' : '/svelteui',
     }
   }
 };
