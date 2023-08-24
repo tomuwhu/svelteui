@@ -2,7 +2,7 @@
 	import { base } from '$app/paths'
 	import { Center, Space, Button, Title, Divider } from '@svelteuidev/core'
 	import { onMount } from 'svelte'
-	var mounted = false
+	var mounted: boolean = false
 	onMount(() => (mounted = true))
 </script>
 

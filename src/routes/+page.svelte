@@ -3,7 +3,7 @@
 	import { Stack, Space, Button, Title } from '@svelteuidev/core'
 	import { onMount } from 'svelte'
 	var x: number = 0
-	var mounted = false
+	var mounted: boolean = false
 	onMount(() => (mounted = true))
 </script>
 
