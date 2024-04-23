@@ -7,7 +7,8 @@
 	var mounted: boolean = false
 	onMount(() => (mounted = true))
 	$: Colors = {
-		t1: `rgb(${r},${g},${b})`
+		t1: `rgb(${r},${g},${b})`,
+		t2: r + g + b < 560 ? 'white' : 'black'
 	};
 </script>
 
@@ -23,16 +24,15 @@
 		<div>G</div><Input type="range" bind:value={g} min=0 max=255></Input>
 		<div>B</div><Input type="range" bind:value={b} min=0 max=255></Input>
 		</div>
-		
 	</Stack>
 	<Space h={30} />
-	<div use:cssvariable={Colors} class="x">Cica</div>
+	<div use:cssvariable={Colors} class="x">rgb({r},{g},{b})</div>
 {/if}
 
 <style>
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(3, 0.2fr 1fr);
 		border: solid 1px black;
 		padding: 15px;
 		border-radius: 17px;
@@ -44,6 +44,7 @@
 	.x {
 		color: var(--t1);
 		text-align: center;
-		font-size: 200px;
+		font-size: 140px;
+		text-shadow: 1px 1px 6px var(--t2);
 	}
 </style>
