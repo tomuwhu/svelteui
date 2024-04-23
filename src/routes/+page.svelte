@@ -8,7 +8,7 @@
 	onMount(() => (mounted = true))
 	$: Colors = {
 		t1: `rgb(${r},${g},${b})`,
-		t2: r + g + b < 560 ? 'white' : 'black'
+		t2: r + g + b < 500 ? 'white' : 'black'
 	};
 </script>
 
@@ -26,7 +26,7 @@
 		</div>
 	</Stack>
 	<Space h={30} />
-	<div use:cssvariable={Colors} class="x">rgb({r},{g},{b})</div>
+	<div use:cssvariable={Colors} class="x">rgb({r}, {g}, {b})</div>
 {/if}
 
 <style>
